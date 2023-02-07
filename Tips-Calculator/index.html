@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Calculator</title>
+</head>
+<body>
+
+    <h2>Tips Calculator</h2>
+    Value ($)<br />
+    <input type="number" id="price"><br />
+    Tip Percent (%)<br />
+    <input type="number" id="percent"><br /><br />
+    <button onclick="takeTip()">Calcular</button><br /><br />
+    Tip: <span></span> $
+
+    <script>
+        let price = document.querySelector('#price')
+        let percent = document.querySelector("#percent")
+        let result = document.querySelector('span')
+
+        function takeTip() {
+            result.innerHTML = (parseFloat(price.value) * parseFloat(percent.value) ) / 100
+        }
+
+    </script>
+    
+</body>
+</html>
